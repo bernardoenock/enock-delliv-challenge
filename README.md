@@ -44,3 +44,9 @@ tecnologias:
 - TypeScript
 - React
 - Redux
+
+Tarefas:
+
+- criar o backend completo e testado
+- criar o frontend completo e testado
+- rodar os dois com o docker compose
