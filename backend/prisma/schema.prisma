@@ -23,7 +23,7 @@ model DeliveryOrder {
   address DeliveryAddress?
   status String
   user Users? @relation(fields: [userID], references: [id])
-  userID String?
+  userID String? @db.Uuid
 }
 
 model DeliveryAddress {
@@ -35,7 +35,7 @@ model DeliveryAddress {
   district String
   code String
   deliveryOrder DeliveryOrder @relation(fields: [orderID], references: [id])
-  orderID String @unique
+  orderID String @unique @db.Uuid
 }
 
 
