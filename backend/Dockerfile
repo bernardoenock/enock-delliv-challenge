@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:16
 
 WORKDIR /app/backend
 
@@ -8,6 +8,6 @@ RUN yarn install
 
 COPY . /app/backend/
 
-EXPOSE 3000
+EXPOSE 4242
 
-CMD ["yarn", "start"]
+# CMD ["yarn", "start:dev"]
