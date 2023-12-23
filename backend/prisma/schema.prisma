@@ -20,22 +20,13 @@ model Users {
 
 model DeliveryOrder {
   id String @id @default(uuid()) @db.Uuid
-  address DeliveryAddress?
-  status String
-  user Users? @relation(fields: [userID], references: [id])
-  userID String? @db.Uuid
-}
-
-model DeliveryAddress {
-  id String @id @default(uuid()) @db.Uuid
   country String
   city String
   state String
   street String
   district String
   code String
-  deliveryOrder DeliveryOrder @relation(fields: [orderID], references: [id])
-  orderID String @unique @db.Uuid
+  status String
+  user Users? @relation(fields: [userID], references: [id])
+  userID String? @db.Uuid
 }
-
-
