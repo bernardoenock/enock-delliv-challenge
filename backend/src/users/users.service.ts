@@ -1,4 +1,4 @@
-import { PrismaService } from "src/prisma.service";
+import { PrismaService } from "../prisma.service";
 import { Users } from "./users.model";
 import { ConflictException, Injectable } from "@nestjs/common";
 
@@ -23,6 +23,14 @@ export class UsersService{
 
     return this.prisma.users.create({
       data
+    })
+  }
+
+  async getOneUser(id: string): Promise<Users>{
+    return this.prisma.users.findUnique({
+      where: {
+        id
+      }
     })
   }
 }
