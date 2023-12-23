@@ -2,10 +2,10 @@ import * as bcrypt from 'bcryptjs'
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
 
-import { PrismaService } from "src/prisma.service";
-import { UsersService } from "src/users/users.service";
+import { PrismaService } from "../prisma.service";
+import { UsersService } from "../users/users.service";
 
-import { Users } from 'src/users/users.model';
+import { Users } from '../users/users.model';
 
 import { LoginDto } from './dto/login-user.dto';
 import { RegisterUsersDto } from './dto/register-user.dto';
