@@ -1,7 +1,19 @@
 
+- [ ] Concluir style das paginas
+  - [ ] Login
+    - [ ] Responsivo e igual ao site delliv
+  - [ ] Dashboard
+    - [ ] Header igual ao delliv
+    - [ ] Modais funcionando corretamente
+    - [ ] Responsivo
+  - [ ] Extra Alertas de torradinhas
+  - [ ] Extra Buy
+
+
 
 - [ ] Criar um fluxo de login com a identidade visual da empresa
 - [ ] Criar uma estrutura de componentes baseada no conceito de Atomic Design
+
 
 
 
