@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:21
 
 WORKDIR /app/frontend
 
@@ -8,6 +8,6 @@ RUN yarn install
 
 COPY . /app/frontend/
 
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["yarn", "start"]
