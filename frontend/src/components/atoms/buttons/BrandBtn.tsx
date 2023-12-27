@@ -1,6 +1,6 @@
 import React from "react"
 import { IconButton, Badge } from "@mui/material"
-import Logo from "../Logo"
+import Logo from "../logo/Logo"
 import { useSelector } from "react-redux"
 import { RootState } from "../../../app/store"
 
