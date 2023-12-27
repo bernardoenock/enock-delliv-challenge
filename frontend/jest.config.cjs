@@ -12,7 +12,6 @@ module.exports = {
     "src/**/*.{js,jsx,ts,tsx}",
     "!src/app/**/*",
     "!src/features/**/*",
-    "!src/vite-env.d.ts",
     "!src/setupTests.ts",
   ],
   moduleNameMapper: {
