@@ -9,8 +9,8 @@ function RoutersApp() {
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/buy" element={<Buy />} />
-        <Route path="/" element={<DashBoard />} />
+        <Route path="/" element={<Buy />} />
+        <Route path="/dashboard" element={<DashBoard />} />
       </Routes>
     </Router>
   )
