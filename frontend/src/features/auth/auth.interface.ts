@@ -39,4 +39,5 @@ export type AuthAction =
 export interface AuthState {
   token: string | null
   error: string | null
+  type: AuthActionTypes | null
 }
