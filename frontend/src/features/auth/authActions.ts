@@ -46,7 +46,6 @@ export const register =
         type: AuthActionTypes.REGISTER_SUCCESS,
       })
     } catch (error: any) {
-      console.log(error)
       dispatch({
         type: AuthActionTypes.REGISTER_FAILURE,
         payload: error.message,
