@@ -3,7 +3,18 @@
 ![diagram](diagram.png)
 
 
-npx prisma migrate dev --name init 
+yarn prisma migrate dev
+
+
+Iniciar app:
+
+
+
+docker-compose up -d
+
+docker exec -it enock-delliv-challenge-backend-1 yarn prisma migrate dev
+
+
 
 
 no authenticated:
