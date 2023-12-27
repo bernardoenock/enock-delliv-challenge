@@ -1,42 +1,42 @@
 version: '3.8'
 services:
-  # backend:
-  #   build:
-  #     context: ./backend
-  #   ports:
-  #     - "4242:4242" # Ajuste a porta conforme necessário para a API do NestJS
-  #   environment:
-  #     - DATABASE_URL=postgresql://enock:123interview@postgres/dellivbd # Ajuste as credenciais do PostgreSQL
-  #     - NODE_ENV=development
-  #   depends_on:
-  #     - postgres
-  #   networks:
-  #     - app-network
-
-  # frontend:
-  #   build:
-  #     context: ./frontend
-  #   ports:
-  #     - "80:80" # Ajuste a porta conforme necessário para o servidor do React
-  #   environment:
-  #     - REACT_APP_API_URL=http://localhost:3000 # URL da API do NestJS
-  #   networks:
-  #     - app-network
-
   postgres:
-    image: postgres:latest
+    image: postgres:13
     restart: always
     environment:
       POSTGRES_USER: enock
       POSTGRES_PASSWORD: 123interview
       POSTGRES_DB: dellivbd
     ports:
-      - "5432:5432" # Porta padrão do PostgreSQL
+      - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
     networks:
       - app-network
+      
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "4242:4242"
+    depends_on:
+      - postgres
+    networks:
+      - app-network
 
+  # frontend:
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8080:8080"
+  #   depends_on:
+  #     - postgres
+  #     - backend
+  #   networks:
+  #     - app-network
+      
 networks:
   app-network:
     driver: bridge

@@ -2,7 +2,8 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-1.1.x"]
 }
 
 datasource db {
@@ -20,22 +21,13 @@ model Users {
 
 model DeliveryOrder {
   id String @id @default(uuid()) @db.Uuid
-  address DeliveryAddress?
-  status String
-  user Users? @relation(fields: [userID], references: [id])
-  userID String?
-}
-
-model DeliveryAddress {
-  id String @id @default(uuid()) @db.Uuid
   country String
   city String
   state String
   street String
   district String
   code String
-  deliveryOrder DeliveryOrder @relation(fields: [orderID], references: [id])
-  orderID String @unique
+  status String
+  user Users? @relation(fields: [userID], references: [id])
+  userID String? @db.Uuid
 }
-
-
