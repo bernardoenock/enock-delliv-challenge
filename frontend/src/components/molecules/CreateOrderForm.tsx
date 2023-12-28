@@ -4,6 +4,7 @@ import axios from "../../app/axiosConfig"
 import { Button, TextField, Typography, Modal, Box } from "@mui/material"
 import { RootState } from "../../app/store"
 import ToastAlert from "../atoms/ToastAlert"
+import { useNavigate } from "react-router-dom"
 
 interface DeliveryData {
   status: string
@@ -29,6 +30,7 @@ const style = {
 }
 
 function CreateOrderForm() {
+  const navigate = useNavigate()
   const [toastAlertState, setToastAlertState] = useState<boolean>(false)
   const [toastMessage, setToastMessage] = useState<string>("")
 
@@ -64,6 +66,7 @@ function CreateOrderForm() {
       setToastMessage(response.data.message)
       setToastAlertState(true)
       handleClose()
+      navigate("/")
     } catch (error) {
       console.error("Error updating delivery:", error)
       setToastMessage("Error updating delivery")

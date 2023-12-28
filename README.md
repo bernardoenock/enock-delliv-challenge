@@ -7,6 +7,8 @@
 ## Iniciar o Monorepo (one cmd):
 
 ```shell
+yarn env
+
 yarn start
 ```
 
