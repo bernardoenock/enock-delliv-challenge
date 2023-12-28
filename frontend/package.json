@@ -9,7 +9,7 @@
     "tscheck": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",
-    "coverage": "jest --coverage"
+    "test:cov": "jest --coverage"
   },
   "keywords": [],
   "author": "",
