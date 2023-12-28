@@ -8,15 +8,21 @@ interface ToastAlertProps {
   toastMessage: string
 }
 
-function ToastAlert({toastAlertState, setToastAlertState, toastMessage}: ToastAlertProps) {
-
-  const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
-    if (reason === 'clickaway') {
-      return;
+function ToastAlert({
+  toastAlertState,
+  setToastAlertState,
+  toastMessage,
+}: ToastAlertProps) {
+  const handleClose = (
+    event: React.SyntheticEvent | Event,
+    reason?: string,
+  ) => {
+    if (reason === "clickaway") {
+      return
     }
 
-    setToastAlertState(false);
-  };
+    setToastAlertState(false)
+  }
 
   const action = (
     <React.Fragment>

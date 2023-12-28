@@ -26,13 +26,17 @@ function LoginForm() {
 
   return (
     <>
-    <FormContainer onSubmit={handleSubmit}>
-      <h2>Login</h2>
-      <InputEmail />
-      <InputPassword />
-      <SingInBtn />
-    </FormContainer>
-    <ToastAlert toastAlertState={toastAlertState} setToastAlertState={setToastAlertState} toastMessage={toastMessage}/>
+      <FormContainer onSubmit={handleSubmit}>
+        <h2>Login</h2>
+        <InputEmail />
+        <InputPassword />
+        <SingInBtn />
+      </FormContainer>
+      <ToastAlert
+        toastAlertState={toastAlertState}
+        setToastAlertState={setToastAlertState}
+        toastMessage={toastMessage}
+      />
     </>
   )
 }

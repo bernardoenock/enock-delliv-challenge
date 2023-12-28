@@ -40,11 +40,13 @@ function DashBoard() {
       <HeadPage />
       <BodyPage>
         <CreateOrderForm />
-        <Box sx={{
-          display: 'flex'
-        }}>
-        <OrdersListContent />
-        <Map />
+        <Box
+          sx={{
+            display: "flex",
+          }}
+        >
+          <OrdersListContent />
+          <Map />
         </Box>
       </BodyPage>
       <FooterPage />

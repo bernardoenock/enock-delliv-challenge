@@ -14,11 +14,11 @@ import { AuthActionTypes } from "../../features/auth/auth.interface"
 
 function RegistrationForm() {
   const [toastAlertState, setToastAlertState] = useState<boolean>(false)
-  const [toastMessage, setToastMessage] = useState<string>('')
-  
+  const [toastMessage, setToastMessage] = useState<string>("")
+
   const navigate = useNavigate()
   const dispatch = useDispatch()
-  const {auth} = useSelector((state: RootState) => state)
+  const { auth } = useSelector((state: RootState) => state)
 
   const handleToast = () => {
     if (auth.type === AuthActionTypes.REGISTER_FAILURE) {
@@ -65,7 +65,11 @@ function RegistrationForm() {
         <InputPassword />
         <SingInBtn />
       </FormContainer>
-      <ToastAlert toastAlertState={toastAlertState} setToastAlertState={setToastAlertState} toastMessage={toastMessage}/>
+      <ToastAlert
+        toastAlertState={toastAlertState}
+        setToastAlertState={setToastAlertState}
+        toastMessage={toastMessage}
+      />
     </>
   )
 }
