@@ -4,7 +4,7 @@ import BodyPage from "../organisms/BodyPage"
 import LoginBtn from "../atoms/buttons/LoginBtn"
 import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
-import { RootState } from "src/app/store"
+import { RootState } from "../../app/store"
 import { Typography } from "@mui/material"
 
 function Buy() {
@@ -14,6 +14,8 @@ function Buy() {
   useEffect(() => {
     if (token) {
       navigate("/dashboard")
+    } else {
+      navigate("/")
     }
   }, [token, navigate])
   return (
