@@ -46,7 +46,7 @@ function EditOrderModal({
     <>
       <Button
         variant="contained"
-        sx={{ backgroundColor: "#69a9c2", color: "white", fontSize: "0.7rem" }}
+        sx={{ backgroundColor: "#69a9c2", color: "white", fontSize: "0.7rem", mb: 1 }}
         fullWidth
         startIcon={<EditNoteIcon />}
         onClick={handleOpen}
