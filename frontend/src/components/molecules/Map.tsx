@@ -16,7 +16,7 @@ function Map() {
       center={myShopCoordinates}
       zoom={13}
       scrollWheelZoom={false}
-      style={{ width: "95%", height: "60vh" }}
+      style={{ width: "50%", height: "60vh" }}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
