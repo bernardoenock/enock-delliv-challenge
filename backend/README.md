@@ -1,3 +1,5 @@
+![dellivLogo](../frontend/public/logo-delliv.png)
+
 # Backend
 
 Iniciar o backend in DEV:

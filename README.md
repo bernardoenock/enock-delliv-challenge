@@ -1,55 +1,58 @@
 
+![dellivLogo](frontend/public/logo-delliv.png)
+
 # Aplicativo de rastreamento de entregas
 
 
-## Iniciar o Monorepo:
-- Crie o .env na pasta ./backend as credenciais estao no .env_example
+## Iniciar o Monorepo (one cmd):
 
-- E rode na raiz do projeto:
 ```shell
 yarn start
 ```
 
-- Tome uma agua
+- Tome uma agua ;)
 
 - Depois que os containers estiverem no ar, acesse: http://localhost:8080/
 
+## Rodar todos os tests principais:
 
+```shell
+yarn test
+```
 
-É permitido:
-- usuários autenticados
-  - visualizar uma lista de pedidos
-  - atualizar o status de cada pedido
-  - fornecer recursos de autenticação e segurança
+## Instalar todas as dependencias (caso queira rodar sem o docker):
 
+```shell
+yarn install:all
+```
 
-repositório (monorepo)
+## Sobre
 
+## Pastas:
 
-folders: (frontend & backend)
+- [backend](/backend/)
+- [fontend](/fontend/)
 
-
-Config:
-- Executar o aplicativo em um contêiner Docker
+## Principios:
+- Executar o aplicativo com um comando usando docker `yarn start`
 - SOLID
-- testes unitários
+- Testes unitários
 
-Linguagem:
-- TypeScript
+## Linguagem:
+- TypeScript / JavaScript
+- SQL
 
-Front:
+## Front:
 - React com Redux
 - Atomic Desing
 
-Back:
+## Back:
 - NestJS com Prisma
 - API RESTful
 - banco de dados PostgreSQL
 
 
-
-repositório (monorepo)
-tecnologias:
+### Tecnologias:
 - Docker
 - Node
 - NestJS
@@ -58,9 +61,3 @@ tecnologias:
 - TypeScript
 - React
 - Redux
-
-Tarefas:
-
-- criar o backend completo e testado
-- criar o frontend completo e testado
-- rodar os dois com o docker compose
