@@ -4,7 +4,7 @@ import LoginForm from "../molecules/LoginForm"
 import BodyPage from "../organisms/BodyPage"
 import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
-import { RootState } from "src/app/store"
+import { RootState } from "../../app/store"
 
 function Login() {
   const navigate = useNavigate()
