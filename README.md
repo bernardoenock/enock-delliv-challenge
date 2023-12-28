@@ -1,5 +1,19 @@
 
-Um aplicativo de rastreamento de entregas
+# Aplicativo de rastreamento de entregas
+
+
+## Iniciar o Monorepo:
+- Crie o .env na pasta ./backend as credenciais estao no .env_example
+
+- E rode na raiz do projeto:
+```shell
+yarn start
+```
+
+- Tome uma agua
+
+- Depois que os containers estiverem no ar, acesse: http://localhost:8080/
+
 
 
 É permitido:
