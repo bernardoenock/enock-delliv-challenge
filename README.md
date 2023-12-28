@@ -31,7 +31,7 @@ yarn install:all
 ## Pastas:
 
 - [backend](/backend/)
-- [fontend](/frontend/)
+- [frontend](/frontend/)
 
 ## Principios:
 - Executar o aplicativo com um comando usando docker `yarn start`
