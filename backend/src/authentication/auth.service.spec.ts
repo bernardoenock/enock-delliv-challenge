@@ -12,6 +12,7 @@ describe('AuthService', () => {
   let authService: AuthService;
   let jwtService: JwtService;
   let prismaService: PrismaService;
+  let usersService: UsersService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
