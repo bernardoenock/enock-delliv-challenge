@@ -3,19 +3,28 @@ import { IconButton, Snackbar } from "@mui/material"
 import CloseIcon from "@mui/icons-material/Close"
 
 interface ToastAlertProps {
-  isOpen: boolean
-  handleToast: () => void
-  message: string
+  toastAlertState: boolean
+  setToastAlertState: React.Dispatch<React.SetStateAction<boolean>>
+  toastMessage: string
 }
 
-function ToastAlert({ isOpen, handleToast, message }: ToastAlertProps) {
+function ToastAlert({toastAlertState, setToastAlertState, toastMessage}: ToastAlertProps) {
+
+  const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setToastAlertState(false);
+  };
+
   const action = (
     <React.Fragment>
       <IconButton
         size="small"
         aria-label="close"
         color="inherit"
-        onClick={handleToast}
+        onClick={handleClose}
       >
         <CloseIcon fontSize="small" />
       </IconButton>
@@ -25,10 +34,10 @@ function ToastAlert({ isOpen, handleToast, message }: ToastAlertProps) {
   return (
     <>
       <Snackbar
-        open={isOpen}
+        open={toastAlertState}
         autoHideDuration={6000}
-        onClose={handleToast}
-        message={message}
+        onClose={handleClose}
+        message={toastMessage}
         action={action}
       />
     </>
