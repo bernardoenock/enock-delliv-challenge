@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Challenge delliv",
   "scripts": {
-    "start": "docker-compose up -d && sleep 180 && docker exec -it enock-delliv-challenge-backend-1 yarn prisma migrate dev"
+    "start": "docker compose up -d && sleep 180 && docker exec -it enock-delliv-challenge-backend-1 yarn prisma migrate dev"
   },
   "author": "Enock",
   "license": "ISC"
