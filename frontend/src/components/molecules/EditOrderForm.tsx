@@ -2,12 +2,12 @@ import React, { useState } from "react"
 import axios from "../../app/axiosConfig"
 import { Button, TextField, Typography } from "@mui/material"
 
-interface EditOrderFromProps {
-  orderId?: string
+interface EditOrderFormProps {
+  orderId: string | undefined
   onUpdate: () => void
 }
 
-function EditOrderForm({ orderId, onUpdate }: EditOrderFromProps) {
+function EditOrderForm({ orderId, onUpdate }: EditOrderFormProps) {
   const [deliveryStatus, setDeliveryStatus] = useState("")
 
   const handleUpdateDeliveryStatus = async () => {
