@@ -9,6 +9,8 @@ import HeadPage from "../organisms/HeadPage"
 import FooterPage from "../organisms/FooterPage"
 import BodyPage from "../organisms/BodyPage"
 import { Box } from "@mui/material"
+import OrdersListContent from "../molecules/OrdersListContent"
+import CreateOrderForm from "../molecules/CreateOrderForm"
 
 function DashBoard() {
   const navigate = useNavigate()
@@ -17,6 +19,8 @@ function DashBoard() {
   useEffect(() => {
     if (!token) {
       navigate("/login")
+    } else {
+      navigate("/dashboard")
     }
   }, [token, navigate])
 
@@ -35,7 +39,13 @@ function DashBoard() {
     >
       <HeadPage />
       <BodyPage>
+        <CreateOrderForm />
+        <Box sx={{
+          display: 'flex'
+        }}>
+        <OrdersListContent />
         <Map />
+        </Box>
       </BodyPage>
       <FooterPage />
     </Box>
