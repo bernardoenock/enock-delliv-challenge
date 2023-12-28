@@ -8,7 +8,7 @@ import { setDeliveryOrders } from "../../features/delivery/deliveryReducer"
 import EditOrderModal from "./EditOrderModal"
 
 interface OrdersListContentProps {
-  closeOrdersListModal: () => void
+  closeOrdersListModal?: () => void
 }
 
 function OrdersListContent({ closeOrdersListModal }: OrdersListContentProps) {
@@ -42,11 +42,13 @@ function OrdersListContent({ closeOrdersListModal }: OrdersListContentProps) {
 
   const handleUpdateSuccess = () => {
     handleEditModalClose()
-    closeOrdersListModal()
+    if (closeOrdersListModal){
+      closeOrdersListModal()
+    }
   }
 
   return (
-    <>
+    <Box>
       <Typography id="modal-modal-title" variant="h6" component="h2">
         Lista de Pedidos
       </Typography>
@@ -79,7 +81,7 @@ function OrdersListContent({ closeOrdersListModal }: OrdersListContentProps) {
           Sem pedidos por agora...
         </Typography>
       )}
-    </>
+    </Box>
   )
 }
 
