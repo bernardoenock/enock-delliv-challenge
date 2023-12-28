@@ -1,20 +1,24 @@
+![dellivLogo](../frontend/public/logo-delliv.png)
+
+# Backend
+
+Iniciar o backend in DEV:
+```shell
+cp .env_example .env &&
+
+yarn install &&
+
+cd data && docker compose up -d
+
+cd ../backend &&
+
+yarn start:dev
+```
+
+
 
 
 ![diagram](diagram.png)
-
-
-yarn prisma migrate dev
-
-
-Iniciar app:
-
-
-
-docker-compose up -d
-
-docker exec -it enock-delliv-challenge-backend-1 yarn prisma migrate dev
-
-
 
 
 no authenticated:
@@ -25,7 +29,7 @@ no authenticated:
 authenticated:
 - [x] list all users: http://localhost:4242/users
 
-- [ ] list profile: http://localhost:4242/profile
+- [x] list profile: http://localhost:4242/profile
 
 delivery order:
 - [x] Create Delivery Order: http://localhost:4242/delivery/create

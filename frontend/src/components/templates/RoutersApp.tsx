@@ -5,7 +5,6 @@ import Login from "./Login"
 import Buy from "./Buy"
 
 function RoutersApp() {
-
   return (
     <Router>
       <Routes>
