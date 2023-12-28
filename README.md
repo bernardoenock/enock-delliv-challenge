@@ -28,25 +28,25 @@ yarn install:all
 
 ## Sobre
 
-## Pastas:
+### Pastas:
 
 - [backend](/backend/)
 - [frontend](/frontend/)
 
-## Principios:
+### Principios:
 - Executar o aplicativo com um comando usando docker `yarn start`
 - SOLID
 - Testes unitários
 
-## Linguagem:
+### Linguagem:
 - TypeScript / JavaScript
 - SQL
 
-## Front:
+### Front:
 - React com Redux
 - Atomic Desing
 
-## Back:
+### Back:
 - NestJS com Prisma
 - API RESTful
 - banco de dados PostgreSQL
